@@ -8,10 +8,9 @@ const config: DataSourceOptions = {
     type: "postgres",
     url: process.env.DATABASE_URL,
     logging: true,
-    ssl: false,
-    // ssl: {
-    //     rejectUnauthorized: false,
-    // },
+    ssl: {
+        rejectUnauthorized: false,
+    },
     entities: [MessageEntity, UserEntity, TokenEntity],
     migrations: ["dist/db/migrations/*.js"],
 }
