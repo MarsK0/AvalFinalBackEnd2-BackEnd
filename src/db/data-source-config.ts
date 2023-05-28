@@ -7,7 +7,6 @@ import dotenv from "dotenv"; dotenv.config()
 const config: DataSourceOptions = {
     type: "postgres",
     url: process.env.DATABASE_URL,
-    schema:"growdev",
     logging: true,
     ssl: false,
     // ssl: {
