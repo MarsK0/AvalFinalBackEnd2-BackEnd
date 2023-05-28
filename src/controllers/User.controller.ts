@@ -83,9 +83,9 @@ class UserController {
       await tokenRepository.insertToken(userFound, token)
 
       res.cookie("token", token, {
-        secure: false,
+        secure: true,
         httpOnly: true,
-        sameSite: "strict"
+        sameSite: "none"
       })
 
       return res.status(200).json({ message: "Login efetuado com sucesso!" })
