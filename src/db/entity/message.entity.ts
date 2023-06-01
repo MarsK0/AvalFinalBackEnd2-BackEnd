@@ -21,7 +21,7 @@ export class MessageEntity{
   archived!: boolean
 
   @Column({
-    default: "now()"
+    default: ()=>"now()"
   })
   date_insertion!: Date
 
