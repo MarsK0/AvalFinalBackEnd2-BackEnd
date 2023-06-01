@@ -14,7 +14,7 @@ export class UserEntity{
   password!: string
 
   @Column({
-    default: "now()"
+    default: ()=>"now()"
   })
   date_insertion!: Date
 
