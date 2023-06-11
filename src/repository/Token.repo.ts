@@ -23,7 +23,7 @@ class TokenRepository{
 
   async insertToken(user: UserEntity, token: string): Promise<void>{
 
-    this.tokenRepository.insert({
+    await this.tokenRepository.insert({
       token,
       user
     })
