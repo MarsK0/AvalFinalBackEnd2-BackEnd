@@ -85,7 +85,7 @@ class UserController {
       res.cookie("token", token, {
         secure: true,
         httpOnly: true,
-        sameSite: "strict"
+        sameSite: "none"
       })
 
       return res.status(200).json({ message: "Login efetuado com sucesso!" })
